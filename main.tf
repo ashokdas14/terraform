@@ -20,23 +20,23 @@ resource "google_compute_instance" "nexus" {
     }
   }
 }
-resource "google_compute_instance" "jenkins" {
-  project      = "cr-gcp-348307"
-  name         = "jenkins"
-  machine_type = "e2-medium"
-  zone         = "us-west1-a"
-  tags         = ["ssh", "port-8080"]
-   boot_disk {
-    initialize_params {
-      image = "cr-jenkins"
-    }
-  }
-  network_interface {
-    network = "default"
-    access_config {
-    }
-  }
-}
+#resource "google_compute_instance" "jenkins" {
+#  project      = "cr-gcp-348307"
+#  name         = "jenkins"
+#  machine_type = "e2-medium"
+#  zone         = "us-west1-a"
+#  tags         = ["ssh", "port-8080"]
+#   boot_disk {
+#    initialize_params {
+#      image = "cr-jenkins"
+#    }
+#  }
+#  network_interface {
+#    network = "default"
+#    access_config {
+#    }
+#  }
+#}
 resource "google_compute_instance" "prometheus" {
   project      = "cr-gcp-348307"
   name         = "prometheus"
