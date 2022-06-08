@@ -24,6 +24,12 @@ pipeline{
             sh 'terraform validate'
             }
         }
+		
+        stage('Terraform Approval'){
+            steps{
+            input "Deploy Infra?"
+            }
+        }
         stage('Terraform Apply'){
             steps{
             sh 'terraform apply --auto-approve';
