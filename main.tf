@@ -20,6 +20,7 @@ resource "google_compute_instance" "nexus" {
     }
   }
 }
+
 #resource "google_compute_instance" "jenkins" {
 #  project      = "cr-gcp-348307"
 #  name         = "jenkins"
