@@ -8,7 +8,6 @@ resource "google_compute_instance" "nexus" {
   name         = "nexus"
   machine_type = "e2-medium"
   zone         = "us-west1-a"
-  internal_ip = "10.138.0.10"
   tags         = ["ssh", "port-8081"]
    boot_disk {
     initialize_params {
@@ -17,6 +16,7 @@ resource "google_compute_instance" "nexus" {
   }
   network_interface {
     network = "default"
+    network_ip = "10.138.0.10
     access_config {
     }
   }
