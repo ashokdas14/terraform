@@ -16,7 +16,7 @@ resource "google_compute_instance" "nexus" {
   }
   network_interface {
     network = "default"
-    network_ip = "10.138.0.10
+    network_ip = "10.138.0.10"
     access_config {
     }
   }
